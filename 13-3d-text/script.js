@@ -4,9 +4,14 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 import * as dat from "dat.gui";
+import { html } from "./3d-text.md";
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
+
+// markdown
+const md = document.querySelector("div#md");
+md.innerHTML = html;
 
 // Sizes
 const sizes = {
@@ -42,7 +47,7 @@ const scene = new THREE.Scene();
  * Textures
  */
 const textureLoader = new THREE.TextureLoader();
-const matcapTexture = textureLoader.load('/textures/matcaps/5.png')
+const matcapTexture = textureLoader.load("/textures/matcaps/5.png");
 
 /**
  * Fonts
@@ -77,9 +82,9 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   /**
    * 方案2: 使用center api
    */
-  textGeometry.center()
+  textGeometry.center();
 
-  const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture});
+  const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture });
   // const textMaterial = new THREE.MeshMatcapMaterial({ matcap: matcapTexture});
   // textMaterial.wireframe = true;
   const text = new THREE.Mesh(textGeometry, material);
@@ -93,12 +98,20 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     const donut = new THREE.Mesh(donutGeometry, material);
     scene.add(donut);
     // 改变位置
-    donut.position.set((Math.random() - 0.5) * 20,(Math.random() - 0.5) * 20,(Math.random() - 0.5) * 20)
+    donut.position.set(
+      (Math.random() - 0.5) * 20,
+      (Math.random() - 0.5) * 20,
+      (Math.random() - 0.5) * 20
+    );
     // 改变角度
-    donut.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI)
+    donut.rotation.set(
+      Math.random() * Math.PI,
+      Math.random() * Math.PI,
+      Math.random() * Math.PI
+    );
     // 改变大小
     const scale = Math.random(); // 确保同一个mesh在各个方向上的缩放程度一致
-    donut.scale.set(scale, scale, scale)
+    donut.scale.set(scale, scale, scale);
   }
   // console.timeEnd('donuts')
 });

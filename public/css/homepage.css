@@ -1,0 +1,9 @@
+@import url('/css/default.css');
+ul > li {
+  font-size: 1.5em;
+}
+ul > li:hover {
+  border: 1px dashed rgb(191, 121, 121);
+  border-radius: 10px;
+  font-size: 1.8em;
+}

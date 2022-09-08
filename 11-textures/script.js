@@ -1,9 +1,14 @@
 import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { html } from "./textures.md";
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
+
+// markdown
+const md = document.querySelector("div#md");
+md.innerHTML = html;
 
 // Textures
 // 方案一 Texture
@@ -24,28 +29,30 @@ const canvas = document.querySelector("canvas.webgl");
 const loadingManager = new THREE.LoadingManager();
 // 以构造函数参数或实例对象属性的方式声明各种事件的回调。使用统一的回调来替代单独设置回调的代码冗余
 loadingManager.onStart = () => {
-  console.log('start');
-}
+  console.log("start");
+};
 loadingManager.onLoad = () => {
-  console.log('loaded');
-}
+  console.log("loaded");
+};
 loadingManager.onProgress = () => {
-  console.log('progress');
-}
+  console.log("progress");
+};
 loadingManager.onError = () => {
-  console.log('error');
-}
+  console.log("error");
+};
 const textureLoader = new THREE.TextureLoader(loadingManager);
-// const colorTexture = textureLoader.load('/textures/door/color.jpg') 
+// const colorTexture = textureLoader.load('/textures/door/color.jpg')
 // const colorTexture = textureLoader.load('/textures/checkerboard-1024x1024.png') // minFilter
 // const colorTexture = textureLoader.load('/textures/checkerboard-8x8.png')// magFilter
-const colorTexture = textureLoader.load('/textures/minecraft.png') // magFilter
-const alphaTexture = textureLoader.load('/textures/door/alpha.jpg')
-const ambientOcclusionTexture = textureLoader.load('/textures/door/ambientOcclusion.jpg')
-const heightTexture = textureLoader.load('/textures/door/height.jpg')
-const metalnessTexture = textureLoader.load('/textures/door/metalness.jpg')
-const normalTexture = textureLoader.load('/textures/door/normal.jpg')
-const roughnessTexture = textureLoader.load('/textures/door/roughness.jpg')
+const colorTexture = textureLoader.load("/textures/minecraft.png"); // magFilter
+const alphaTexture = textureLoader.load("/textures/door/alpha.jpg");
+const ambientOcclusionTexture = textureLoader.load(
+  "/textures/door/ambientOcclusion.jpg"
+);
+const heightTexture = textureLoader.load("/textures/door/height.jpg");
+const metalnessTexture = textureLoader.load("/textures/door/metalness.jpg");
+const normalTexture = textureLoader.load("/textures/door/normal.jpg");
+const roughnessTexture = textureLoader.load("/textures/door/roughness.jpg");
 
 // 重复
 // colorTexture.repeat.x = 2
@@ -69,10 +76,9 @@ const roughnessTexture = textureLoader.load('/textures/door/roughness.jpg')
 
 // while minFilter === THREE.NearestFilter, we don't need the mipmaps
 colorTexture.generateMipmaps = false;
-colorTexture.minFilter = THREE.NearestFilter
+colorTexture.minFilter = THREE.NearestFilter;
 
-colorTexture.magFilter = THREE.NearestFilter
-
+colorTexture.magFilter = THREE.NearestFilter;
 
 // Sizes
 const sizes = {
@@ -98,9 +104,9 @@ const scene = new THREE.Scene();
 
 const box = new THREE.BoxGeometry(1, 1, 1);
 // console.log(box.attributes.uv)
- 
+
 const material = new THREE.MeshBasicMaterial({
-  map: colorTexture
+  map: colorTexture,
 });
 
 const mesh = new THREE.Mesh(box, material);

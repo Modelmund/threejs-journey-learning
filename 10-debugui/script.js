@@ -3,11 +3,16 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import gsap from "gsap";
 import * as dat from "dat.gui";
+import { html } from "./debugui.md"
 
 // console.log(dat)
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
+
+// markdown
+const md = document.querySelector('div#md')
+md.innerHTML = html
 
 // 自定义debugui参数，因为创建material时需要用到，所以放在前面
 // 使用该变量创建material的原因：为了避免debugui控制面板颜色和实际material的颜色不一致

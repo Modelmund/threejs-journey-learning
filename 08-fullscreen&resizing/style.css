@@ -1,16 +1,1 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  overflow: hidden
-}
-
-.webgl {
-  /* 隐藏scrollbar */
-  position: fixed;
-  left: 0;
-  top: 0;
-  outline: none;
-}
+@import url('/css/fullscreen.css');
