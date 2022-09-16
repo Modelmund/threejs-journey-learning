@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "type": "module",
+  "homepage": "https://modelmund.github.io/threejs-journey-learning",
   "scripts": {
     "dev": "vite dev --host",
     "build": "vite build",
@@ -17,7 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "dat.gui": "^0.7.9",
-    "gsap": "3.5.1",
+    "gsap": "3.11.1",
     "three": "^0.143.0"
   },
   "devDependencies": {
