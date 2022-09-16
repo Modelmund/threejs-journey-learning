@@ -40,7 +40,13 @@ a > .demo_wrapper {
 .demo_wrapper > img {
   width: 150px;
   height: 150px;
-  border-radius: 5px;
+  border-radius: 50%;
+  transition: border-radius 1.2s ease;
+}
+
+.demo_wrapper > img:hover{
+  border-radius: 10px;
+  transition: border-radius 1.2s ease;
 }
 
 .demo_wrapper > span{
