@@ -23,17 +23,15 @@ div.content_wrapper {
 a {
   text-decoration: none;
 }
-a:link {
+/* a:link {
   color: rgb(34, 32, 32);
 }
 a:visited {
   color: rgb(130, 130, 226);
 }
-/*上面两种一般只能用在a元素上*/
 a:hover {
   color: rgb(191, 121, 121);
 }
-/*hover基本所有元素都可以使用*/
 a:active {
   color: rgb(101, 209, 101);
-}
+} */
