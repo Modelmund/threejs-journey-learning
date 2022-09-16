@@ -1,0 +1,9 @@
+import{S as m,f as u,g as h,M as p,a as g,P as f,C as b,W as v,b as y}from"./three.module.600c0fd6.js";import{O as E}from"./OrbitControls.43983444.js";const F=`<ol>
+<li>\u4EC0\u4E48\u662Fgeometry</li>
+</ol>
+<ul>
+<li>\u7531\u9876\u70B9\u548C\u9762\u7EC4\u6210\uFF08\u4E09\u89D2\u5F62\u548C\u70B9\u7EC4\u6210\u4E86\u9762\uFF09</li>
+<li>\u80FD\u7528\u5728\u7F51\u683C\uFF08mesh\uFF09\u4E2D\uFF0C\u4E5F\u80FD\u7528\u5728\u7C92\u5B50\uFF08particles\uFF09\u4E2D</li>
+<li>\u80FD\u6BD4\u5B9A\u4F4D\uFF08position\uFF09\u5B58\u50A8\u66F4\u591A\u6570\u636E\u3002\u5982UV coordinates\uFF0Cnormal colors \u6216\u5176\u4ED6\u6570\u636E</li>
+</ul>
+`,i=document.querySelector("canvas.webgl"),k=document.querySelector("div#md");k.innerHTML=F;i.addEventListener("mousemove",t=>{t.clientX/e.width-.5,-(t.clientY/e.height-.5)});const e={width:window.innerWidth,height:window.innerHeight};window.addEventListener("resize",()=>{e.width=window.innerWidth,e.height=window.innerHeight,n.aspect=e.width/e.height,n.updateProjectionMatrix(),o.setSize(e.width,e.height),o.setPixelRatio(Math.min(window.devicePixelRatio,2))});window.addEventListener("dblclick",()=>{document.fullscreenElement||document.webkitFullscreenElement?document.exitFullscreen?document.exitFullscreen():document.webkitExitFullscreen():i.requestFullscreen?i.requestFullscreen():i.webkitRequestFullscreen()});const s=new m,l=new u,c=357,a=new Float32Array(c*3*3);for(let t=0;t<c*3*3;t++)a[t]=(Math.random()-.5)*3;const M=new h(a,3);l.setAttribute("position",M);const A=new p({color:"yellowgreen",wireframe:!0}),r=new g(l,A);s.add(r);const n=new f(75,e.width/e.height,.1,100);n.position.z=3;n.lookAt(r.position);s.add(n);new b(n);const d=new E(n,i);d.enableDamping=!0;const o=new v({canvas:i});o.setSize(e.width,e.height);const q=new y,w=()=>{const t=q.getElapsedTime();d.update(),r.rotation.y=t/2,o.render(s,n),window.requestAnimationFrame(w)};w();
