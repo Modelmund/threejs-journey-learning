@@ -83,8 +83,7 @@ jobs:
       # 2. 尝试方案：构建时部署前用命令创建 CNAME 文件
       - name: Create CNAME file for gh-pages
         run: |
-          echo threejs.binw.xyz > CNAME,
-          mv ./CNAME ./dist.
+          echo threejs.binw.xyz > CNAME && mv ./CNAME ./dist
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
