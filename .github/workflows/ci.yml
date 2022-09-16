@@ -84,7 +84,6 @@ jobs:
       - name: Create CNAME file for gh-pages
         run: |
           echo threejs.binw.xyz > CNAME,
-          ls,
           mv ./CNAME ./dist.
 
       - name: Deploy to gh-pages
