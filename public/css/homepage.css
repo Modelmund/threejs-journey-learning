@@ -1,9 +1,49 @@
 @import url('/css/default.css');
-ul > li {
-  font-size: 1.5em;
+.title {
+  text-align: center;
 }
-ul > li:hover {
-  border: 1px dashed rgb(191, 121, 121);
+
+.list_wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.list_wrapper > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list_wrapper > ul > li {
+  list-style: none;
+}
+
+ul > li {
+  font-size: 1.2em;
+  transition: scale 1.2s ease;
+}
+
+ul > li:hover { 
   border-radius: 10px;
-  font-size: 1.8em;
+  scale: 1.2;
+  transition: scale 1.2s ease;
+}
+
+a > .demo_wrapper {
+  width: 160px;
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo_wrapper > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.demo_wrapper > span{
+  padding: 2px;
+  margin: 3px;
 }
