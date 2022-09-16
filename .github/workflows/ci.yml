@@ -76,6 +76,15 @@ jobs:
         with:
           name: production-files
           path: ./dist
+      
+      # gh-pages 的custom domain在自动构建过程中（貌似）会替换整个gh-pages分支，删除包括已有的CNAME文件的所有文件
+      # 然后重新上传新构建出来的文件。而CNAME文件在自定义域的条件下又是必须的，且必须在根目录。
+      # 1. 成熟的方案：将CNAME文件放在项目的静态文件夹如public、static的文件夹下，构建后会在根目录下
+      # 2. 尝试方案：构建时部署前用命令创建 CNAME 文件
+      - name: Create CNAME file for gh-pages
+        run: |
+          echo threejs.binw.xyz > CNAME,
+          mv CNAME ./dist
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
