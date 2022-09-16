@@ -9,12 +9,17 @@
 }
 
 .list_wrapper > ul {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  justify-content: center;
 }
 
 .list_wrapper > ul > li {
   list-style: none;
+}
+
+ul {
+  padding-inline-start: 0;
 }
 
 ul > li {
@@ -26,6 +31,12 @@ ul > li:hover {
   border-radius: 10px;
   scale: 1.2;
   transition: scale 1.2s ease;
+}
+
+a {
+  display: grid;
+  justify-content: center;
+  color: black;
 }
 
 a > .demo_wrapper {
