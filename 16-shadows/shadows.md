@@ -13,7 +13,7 @@
 2. Object3D (mesh, light..) 决定 castShadow (光线经过会产生阴影) 还是 receiveShadow （接收阴影的投影）
 
 # support shadow lights
-1. pointLight
+1. PointLight
 2. DirectionalLight
 3. SpotLight
 
