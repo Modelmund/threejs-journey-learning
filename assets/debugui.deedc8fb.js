@@ -1,4 +1,4 @@
-import{S as h,B as m,M as w,a as p,P as u,C as g,W as b,b as f}from"./three.module.600c0fd6.js";import{O as x}from"./OrbitControls.43983444.js";import{g as y}from"./index.56cf7046.js";import{G as C}from"./dat.gui.module.fa9eec39.js";const v=`<h1>debug ui</h1>
+import{S as h,B as m,M as w,a as p,P as u,C as g,W as b,b as f}from"./three.module.ebe9e46f.js";import{O as x}from"./OrbitControls.cbb81cef.js";import{g as y}from"./index.56cf7046.js";import{G as C}from"./dat.gui.module.fa9eec39.js";const v=`<h1>debug ui</h1>
 <ul>
 <li>\u7528\u4E8E\u8C03\u8BD5\u56FE\u5F62,\u5373threejs\u5B98\u7F51examples\u4E2D\u7684\u8C03\u8BD5\u9762\u677F</li>
 <li>\u53EF\u4EE5\u81EA\u884C\u521B\u5EFA\uFF0C\u4E5F\u53EF\u4EE5\u4F7F\u7528\u73B0\u6709\u7684\u5E93</li>

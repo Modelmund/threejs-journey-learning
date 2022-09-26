@@ -1,4 +1,4 @@
-import{h as x,i as f,S as v,j as y,a as m,k as b,g as h,l as M,m as j,n as L,o as S,P as T,C as k,W as z,b as C}from"./three.module.600c0fd6.js";import{O as H}from"./OrbitControls.43983444.js";import{G as P}from"./dat.gui.module.fa9eec39.js";const A=`<h1>materials</h1>
+import{h as x,i as f,S as v,j as y,a as m,k as b,g as h,l as M,m as j,n as L,o as S,P as T,C as k,W as z,b as C}from"./three.module.ebe9e46f.js";import{O as H}from"./OrbitControls.cbb81cef.js";import{G as P}from"./dat.gui.module.fa9eec39.js";const A=`<h1>materials</h1>
 <ul>
 <li>materials are used to put a color on each visible pixel of the geometried. The algorithms are written in programs called shaders.</li>
 <li>Normals are information that contains the direction of the outside of the face. Can be use for lighting, reflection, refraction, etc.</li>

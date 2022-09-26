@@ -1,4 +1,4 @@
-import{S as y,n as P,D as S,H as b,o as A,R as v,V as M,t as R,u as G,v as k,w as z,x as D,j as q,a as d,k as T,B as W,m as j,l as C,P as I,W as B,b as E}from"./three.module.600c0fd6.js";import{O as F}from"./OrbitControls.43983444.js";import{G as O}from"./dat.gui.module.fa9eec39.js";import{R as V}from"./RectAreaLightHelper.f9db3fa3.js";const U=`<h1>\u6027\u80FD\u5F71\u54CD</h1>
+import{S as y,n as P,D as S,H as b,o as A,R as v,V as M,t as R,u as G,v as k,w as z,x as D,j as q,a as d,k as T,B as W,m as j,l as C,P as I,W as B,b as E}from"./three.module.ebe9e46f.js";import{O as F}from"./OrbitControls.cbb81cef.js";import{G as O}from"./dat.gui.module.fa9eec39.js";import{R as V}from"./RectAreaLightHelper.544d574d.js";const U=`<h1>\u6027\u80FD\u5F71\u54CD</h1>
 <ul>
 <li>minimal cost
 AmbientLight, HemisphericLight</li>

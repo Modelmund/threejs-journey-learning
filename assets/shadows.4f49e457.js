@@ -1,4 +1,4 @@
-import{S as v,h as z,n as P,D as T,C as m,t as C,o as H,j as k,a as c,k as D,l as g,M as E,P as j,W as R,K as I,b as G}from"./three.module.600c0fd6.js";import{O as q}from"./OrbitControls.43983444.js";import{G as F}from"./dat.gui.module.fa9eec39.js";import"./RectAreaLightHelper.f9db3fa3.js";const W=`<h1>shadows</h1>
+import{S as v,h as z,n as P,D as T,C as m,t as C,o as H,j as k,a as c,k as D,l as g,M as E,P as j,W as R,K as I,b as G}from"./three.module.ebe9e46f.js";import{O as q}from"./OrbitControls.cbb81cef.js";import{G as F}from"./dat.gui.module.fa9eec39.js";import"./RectAreaLightHelper.544d574d.js";const W=`<h1>shadows</h1>
 <ul>
 <li>the dark shadow in the back of the objects are <strong>core shadows</strong>, what we are missing are the <strong>drop shadows</strong></li>
 </ul>
@@ -17,7 +17,7 @@ import{S as v,h as z,n as P,D as T,C as m,t as C,o as H,j as k,a as c,k as D,l a
 </ol>
 <h1>support shadow lights</h1>
 <ol>
-<li>pointLight</li>
+<li>PointLight</li>
 <li>DirectionalLight</li>
 <li>SpotLight</li>
 </ol>
